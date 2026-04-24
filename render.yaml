@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: career-ops-webapp
+    runtime: python
+    plan: starter
+    region: oregon
+    branch: main
+    buildCommand: |
+      pip install -r webapp/requirements.txt
+      npm install
+    startCommand: cd webapp && uvicorn main:app --host 0.0.0.0 --port ${PORT}
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: DATA_ROOT
+        value: /var/data/career-ops
+      - key: OPENAI_API_KEY
+        sync: false
+    disk:
+      name: career-ops-data
+      mountPath: /var/data
+      sizeGB: 5
+

@@ -1,0 +1,277 @@
+:root {
+  --bg: #0f1419;
+  --card: #1a2332;
+  --text: #e6edf3;
+  --muted: #8b9cb3;
+  --accent: #58a6ff;
+  --ok: #3fb950;
+  --border: #30363d;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.top {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.llm-banner {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.llm-banner.ok {
+  color: #3fb950;
+}
+
+.top h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+  max-width: 56rem;
+}
+
+.ethics {
+  display: block;
+  margin-top: 0.5rem;
+  color: #d29922;
+  font-size: 0.9rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 2rem 3rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.card.wide {
+  grid-column: 1 / -1;
+}
+
+.job-profile-fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem 0.85rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.job-profile-fieldset legend {
+  padding: 0 0.35rem;
+}
+
+.job-profile-grid {
+  display: grid;
+  gap: 0.4rem 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.file-label input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  background: #21262d;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  margin-right: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  background: #21262d;
+  color: var(--text);
+}
+
+button.primary {
+  background: #238636;
+  border-color: #2ea043;
+  color: #fff;
+}
+
+button.secondary {
+  background: #21262d;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0d1117;
+  color: var(--text);
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+
+.or {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.preview {
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 22rem;
+  overflow: auto;
+  font-size: 0.8rem;
+  background: #0d1117;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.actions {
+  margin-top: 0.75rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.88rem;
+}
+
+.status {
+  min-height: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--ok);
+}
+
+.jobs {
+  margin-top: 0.75rem;
+  max-height: 28rem;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.job-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.job-row:last-child {
+  border-bottom: none;
+}
+
+.job-row a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.job-row a:hover {
+  text-decoration: underline;
+}
+
+.job-title {
+  font-weight: 600;
+}
+
+.apps {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.apps li {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: center;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #21262d;
+  color: var(--muted);
+}
+
+.foot {
+  padding: 1rem 2rem 2rem;
+  text-align: center;
+}
+
+.foot a {
+  color: var(--accent);
+}
+
+.chk-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.chk-inline input {
+  cursor: pointer;
+}
+
+code {
+  font-size: 0.85em;
+  background: #21262d;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
