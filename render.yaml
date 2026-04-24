@@ -2,7 +2,7 @@ services:
   - type: web
     name: career-ops-webapp
     runtime: python
-    plan: starter
+    plan: free
     region: oregon
     branch: main
     buildCommand: |
@@ -15,11 +15,6 @@ services:
       - key: NODE_VERSION
         value: 20.18.0
       - key: DATA_ROOT
-        value: /var/data/career-ops
+        value: /tmp/career-ops
       - key: OPENAI_API_KEY
         sync: false
-    disk:
-      name: career-ops-data
-      mountPath: /var/data
-      sizeGB: 5
-
